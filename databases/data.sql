@@ -100,6 +100,20 @@ INSERT INTO reproducciones (id_usuario, id_cancion, fecha_hora, dispositivo) VAL
 (5,8,'2024-01-03 10:00:00','pc'),
 (6,9,'2024-01-03 11:00:00','tablet');
 
+
+INSERT INTO reproducciones (id_usuario, id_cancion, fecha_hora, dispositivo) VALUES
+(1,1,'2024-01-01 11:00:00','móvil'),
+(2,2,'2024-01-01 12:30:00','pc'),
+(3,3,'2024-01-01 13:00:00','tablet'),
+
+(1,4,'2024-01-02 10:00:00','móvil'),
+(2,5,'2024-01-02 11:00:00','pc'),
+(3,6,'2024-01-02 12:00:00','móvil'),
+
+(4,7,'2024-01-03 09:00:00','móvil'),
+(5,8,'2024-01-03 10:00:00','pc'),
+(6,9,'2024-01-03 11:00:00','tablet');
+
 INSERT INTO favoritos (id_usuario, id_cancion, fecha_agregado) VALUES
 (1,1,'2024-01-01 10:05:00'),
 (1,2,'2024-01-01 12:05:00'),
