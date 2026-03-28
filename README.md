@@ -19,24 +19,25 @@ El objetivo es visualizar el comportamiento de los usuarios, identificar tendenc
 
 El dashboard está dividido en las siguientes secciones:
 
-### 1. Vista General
+### Vista General
 - Métricas principales:
   - Total de reproducciones
   - Total de usuarios
   - Total de canciones
 - Resumen general del comportamiento
 
-### 2. Análisis por País
+
+### Análisis por Canciones y Usuarios
+- Top canciones más reproducidas
+- Usuarios con mayor número de reproducciones
+
+### Análisis por País
 - Gráfico de barras con reproducciones por país
 - Identificación de regiones con mayor actividad
 
-### 3. Análisis por Dispositivo
+### Análisis por Dispositivo
 - Distribución de uso por dispositivo (móvil, PC, tablet)
 - Comparación de preferencias de acceso
-
-### 4. Análisis por Canciones y Usuarios
-- Top canciones más reproducidas
-- Usuarios con mayor número de reproducciones
 
 ---
 
@@ -47,7 +48,7 @@ El dashboard está dividido en las siguientes secciones:
 
 ---
 ## 🗄️ Configuración de la base de datos
-Antes de usar el dashboard, es necesario crear y probar la base de datos.
+Antes de usar el dashboard, es necesario crear y poblar la base de datos.
 
 ### 1. Crea base de datos y tablas
  Ejecuta el script `databases/schema.sql` para crear la base de datos y las tablas
@@ -58,11 +59,13 @@ Antes de usar el dashboard, es necesario crear y probar la base de datos.
 
 ## 🔌 Conexión a la base de datos (ODBC)
 El dashboard utiliza una conexión ODBC para acceder a MySQL.
+
 ### Requisitos
-MySQL instalado y en ejecución
-MySQL ODBC Driver instalado
+- MySQL instalado y en ejecución
+- MySQL ODBC Driver instalado
+
 ### Pasos
-1. Configurar un DSN para la base de datos streaming_musica
+1. Configurar un DSN para la base de datos `streaming_musica`
 2. Abrir Power BI Desktop
 3. Seleccionar Obtener datos → ODBC
 4. Elegir el DSN configurado
@@ -73,11 +76,11 @@ MySQL ODBC Driver instalado
 
 ## 🚀 Cómo usar
 1. Configurar la base de datos en MySQL (ver sección anterior)
-2. Configura la conexión ODBC
+2. Configurar la conexión ODBC
 3. Abrir el archivo `powerbi/streaming_musica.pbix` en Power BI Desktop  
-2. Navegar entre las páginas del dashboard  
-3. Utilizar los slicers para filtrar la información  
-4. Analizar los resultados en las visualizaciones  
+4. Navegar entre las páginas del dashboard  
+5. Utilizar los slicers para filtrar la información  
+6. Analizar los resultados en las visualizaciones  
 
 ---
 
@@ -92,7 +95,7 @@ El dashboard incluye:
 ## 📷 Vista previa
 
 ### Vista general del dashboard principal
-<img src ="imagenes/dashboard_1.png" width="100%">
+<img src ="images/dashboard_1.png" width="100%">
 
 Este panel muestra una visión global del sistema, incluyendo métricas
 clave como total de reproducciones, usuarios y canciones.
@@ -100,9 +103,9 @@ clave como total de reproducciones, usuarios y canciones.
 ---
 
 ### Análisis detallado de reproducciones
-<img src ="imagenes/dashboard_2.png" width="100%">
+<img src ="images/dashboard_2.png" width="100%">
 
-Permite identificar los países con mayor número de reproducciones y comparar  el comportamiento entre regiones. También muestra la distribución del uso de la plataforma según el tipo de dispositivo utilizado por los usuarios.
+Permite identificar los países con mayor número de reproducciones y comparar el comportamiento entre regiones. También muestra la distribución del uso de la plataforma según el tipo de dispositivo.
  
 ---
 
