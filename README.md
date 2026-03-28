@@ -50,7 +50,7 @@ El dashboard está dividido en las siguientes secciones:
 Antes de usar el dashboard, es necesario crear y probar la base de datos.
 
 ### 1. Crea base de datos y tablas
- Ejectuta el script `databases/schema.sql` para crear la base de datos y las tablas
+ Ejecuta el script `databases/schema.sql` para crear la base de datos y las tablas
 
 ### 2. Insertar datos
  Inserta los datos de prueba del script `databases/data.sql` 
@@ -72,7 +72,7 @@ MySQL ODBC Driver instalado
 ---
 
 ## 🚀 Cómo usar
-1. Configurar la base de datos en MYSQL (ver sección anterior)
+1. Configurar la base de datos en MySQL (ver sección anterior)
 2. Configura la conexión ODBC
 3. Abrir el archivo `powerbi/streaming_musica.pbix` en Power BI Desktop  
 2. Navegar entre las páginas del dashboard  
@@ -89,11 +89,40 @@ El dashboard incluye:
 
 ---
 
+## 📷 Vista previa
+
+### Vista general del dashboard principal
+<img src ="imagenes/dashboard_1.png" width="100%">
+
+Este panel muestra una visión global del sistema, incluyendo métricas
+clave como total de reproducciones, usuarios y canciones.
+
+---
+
+### Análisis detallado de reproducciones
+<img src ="imagenes/dashboard_2.png" width="100%">
+
+Permite identificar los países con mayor número de reproducciones y comparar  el comportamiento entre regiones. También muestra la distribución del uso de la plataforma según el tipo de dispositivo utilizado por los usuarios.
+ 
+---
+
+## 📊 Insights del análisis
+
+A partir de los datos analizados en el dashboard, se observan los siguientes patrones:
+
+- México presenta el mayor número de reproducciones dentro del conjunto de datos.  
+- El uso de dispositivos móviles es predominante frente a otras opciones.  
+- Algunas canciones concentran más reproducciones que otras, mostrando diferencias en popularidad.  
+- Existen usuarios con mayor actividad en comparación con el resto.  
+
+---
+
 ## 📌 Notas
+- Estos hallazgos se basan en un conjunto de datos de tamaño reducido, por lo que su propósito es demostrar capacidades de análisis y visualización.
 - Algunos filtros aplican únicamente a visualizaciones específicas  
 - Los datos están estructurados para análisis exploratorio  
 
 ---
 
 ## 👩‍💻 Autor
-Barbara Badillo
+Bárbara Badillo
