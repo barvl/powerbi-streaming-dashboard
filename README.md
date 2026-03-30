@@ -58,6 +58,9 @@ Antes de usar el dashboard, es necesario crear y poblar la base de datos.
 ---
 
 ## 🔌 Conexión a la base de datos (ODBC)
+---
+
+## 🔌 Conexión a la base de datos (ODBC)
 El dashboard utiliza una conexión ODBC para acceder a MySQL.
 
 ### Requisitos
