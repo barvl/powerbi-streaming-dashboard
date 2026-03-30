@@ -47,6 +47,7 @@ El dashboard está dividido en las siguientes secciones:
 - DAX (Data Analysis Expressions)
 
 ---
+
 ## 🗄️ Configuración de la base de datos
 Antes de usar el dashboard, es necesario crear y poblar la base de datos.
 
@@ -54,10 +55,8 @@ Antes de usar el dashboard, es necesario crear y poblar la base de datos.
  Ejecuta el script `databases/schema.sql` para crear la base de datos y las tablas
 
 ### 2. Insertar datos
- Inserta los datos de prueba del script `databases/data.sql` 
----
+ Inserta los datos de prueba del script `databases/data.sql`
 
-## 🔌 Conexión a la base de datos (ODBC)
 ---
 
 ## 🔌 Conexión a la base de datos (ODBC)
