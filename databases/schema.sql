@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS streaming_musica;
 USE streaming_musica;
--- SHOW ENGINES;
 
+-- SHOW ENGINES;
 CREATE TABLE usuarios (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,

@@ -97,7 +97,7 @@ El dashboard incluye:
 ## 📷 Vista previa
 
 ### Vista general del dashboard principal
-<img src ="images/dashboard_1.png" width="100%">
+<img src ="images/dashboard_principal.png" width="100%">
 
 Este panel muestra una visión global del sistema, incluyendo métricas
 clave como total de reproducciones, usuarios y canciones.
@@ -105,7 +105,7 @@ clave como total de reproducciones, usuarios y canciones.
 ---
 
 ### Análisis detallado de reproducciones
-<img src ="images/dashboard_2.png" width="100%">
+<img src ="images/graficas_y_slicers.png" width="100%">
 
 Permite identificar los países con mayor número de reproducciones y comparar el comportamiento entre regiones. También muestra la distribución del uso de la plataforma según el tipo de dispositivo.
  
