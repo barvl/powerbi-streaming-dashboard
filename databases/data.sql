@@ -300,35 +300,48 @@ INSERT INTO favoritos (id_usuario, id_cancion, fecha_agregado) VALUES
 (35,22, '2024-02-27 23:08:43'),
 (38,80, '2025-03-28 20:12:32');
 
--- REPRODUCCIONES 
+
+
+-- REPRODUCCIONES REALISTAS (long tail)
 INSERT INTO reproducciones (id_usuario, id_cancion, fecha_hora, dispositivo)
 SELECT
-    FLOOR(1 + RAND()*52),
-
-    CASE 
-        WHEN RAND() < 0.2 THEN FLOOR(1 + RAND()*10)   -- 🔥 pocas canciones populares
-        WHEN RAND() < 0.6 THEN FLOOR(1 + RAND()*40)   -- 🎧 canciones medias
-        ELSE FLOOR(1 + RAND()*81)                     -- 🎶 todas
+    -- Usuarios: top 10 muy activos, otros medianos y pocos poco activos
+    CASE
+        WHEN RAND() < 0.15 THEN FLOOR(1 + RAND()*10)       -- top 10 usuarios
+        WHEN RAND() < 0.60 THEN FLOOR(11 + RAND()*20)     -- usuarios medianos
+        ELSE FLOOR(31 + RAND()*20)                        -- usuarios poco activos
     END,
 
-    DATE_ADD(
-        DATE_ADD('2024-01-01', INTERVAL FLOOR(RAND()*900) DAY),
-        INTERVAL FLOOR(RAND()*24) HOUR
-    ),
+    -- Canciones: algunas súper populares, otras medias y muchas pocas escuchadas
+    CASE
+        WHEN RAND() < 0.10 THEN FLOOR(1 + RAND()*5)       -- súper populares
+        WHEN RAND() < 0.40 THEN FLOOR(6 + RAND()*20)      -- populares medias
+        ELSE FLOOR(26 + RAND()*56)                        -- resto
+    END,
 
-    CASE 
+    -- Fecha y hora entre 2024-01-01 y 2026-04-04
+    DATE_ADD(
+        '2024-01-01',
+        INTERVAL FLOOR(RAND()*820) DAY) + INTERVAL FLOOR(RAND()*24) HOUR AS fecha_hora,
+		
+    -- Dispositivo: distribución realista
+    CASE
         WHEN RAND() < 0.7 THEN 'móvil'
         WHEN RAND() < 0.9 THEN 'pc'
         ELSE 'tablet'
     END
-
 FROM
     (SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5
      UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9 UNION ALL SELECT 10) t1,
     (SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5
      UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9 UNION ALL SELECT 10) t2,
     (SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5
-     UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9 UNION ALL SELECT 10) t3
-LIMIT 4000;
+     UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9 UNION ALL SELECT 10) t3,
+    (SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5
+     UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9 UNION ALL SELECT 10) t4,
+    (SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5
+     UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9 UNION ALL SELECT 10) t5
+LIMIT 50000;
+
 
 
